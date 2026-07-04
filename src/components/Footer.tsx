@@ -35,15 +35,13 @@ export default function Footer() {
           {/* Brand block */}
           <div>
             <div className="mb-[18px]">
-              <div className="inline-block bg-white rounded-lg p-2">
-                <Image
-                  src="/logo.png"
-                  alt="Universal College of Business and Management"
-                  width={155}
-                  height={73}
-                  className="object-contain"
-                />
-              </div>
+              <Image
+                src="/logo-footer.png"
+                alt="Universal College of Business and Management"
+                width={180}
+                height={85}
+                className="object-contain rounded-lg"
+              />
             </div>
             <p className="text-[13.5px] leading-[1.7] mb-5">
               Academic, professional and short courses — Full-Time, Part-Time, ODL and Online — from Certificate to Professional Doctorate.
