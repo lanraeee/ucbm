@@ -59,8 +59,8 @@ export default function Contact() {
             <div className="flex flex-col gap-4.5">
               {[
                 { icon: '✉', label: 'Email',  value: 'admissions@ucbm.co.uk', note: '' },
-                { icon: '◎', label: 'Campus', value: 'United Kingdom', note: 'All countries welcome.' },
-                { icon: '✆', label: 'Phone',  value: '0161399UCBM', note: 'WhatsApp Us' },
+                { icon: '◎', label: 'Locations', value: 'United Kingdom', note: '' },
+                { icon: '✆', label: 'Phone',  value: '0161399UCBM', note: 'You can now WhatsApp Us' },
               ].map((item) => (
                 <div key={item.label} className="flex gap-3.5 items-start">
                   <div className="w-[42px] h-[42px] rounded-[10px] bg-ucbm-gold-badge text-ucbm-gold-btx grid place-items-center text-[17px] flex-shrink-0">
