@@ -53,4 +53,17 @@
   .course-card {
     @apply bg-white border border-ucbm-border rounded-xl overflow-hidden flex flex-col transition-shadow duration-200 hover:shadow-card;
   }
+
+  /* Responsive footer grid — 4 cols → 2 → 1 */
+  .footer-grid {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  }
+  @media (max-width: 1024px) {
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
 }

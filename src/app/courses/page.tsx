@@ -33,24 +33,24 @@ function CoursesContent() {
     <main>
       {/* Page header with filters */}
       <section
-        className="text-white px-6 py-16"
+        className="text-white px-6 py-12 md:py-16"
         style={{ background: 'linear-gradient(135deg, #2a1440, #3b1d5e)' }}
       >
         <div className="max-w-ucbm mx-auto">
           <p className="eyebrow mb-2.5">Certificate to Professional Doctorate</p>
-          <h1 className="font-marcellus text-[44px] font-normal m-0 mb-5 max-sm:text-[34px]">Our Courses</h1>
+          <h1 className="font-marcellus text-[34px] md:text-[44px] font-normal m-0 mb-5">Our Courses</h1>
           <div className="flex gap-3 flex-wrap items-center">
             <input
               type="search"
               placeholder="Search courses…"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className={`${inputClass} w-[300px] max-w-full`}
+              className={`${inputClass} w-full sm:w-[300px]`}
             />
-            <select value={faculty} onChange={(e) => setFaculty(e.target.value)} className={inputClass}>
+            <select value={faculty} onChange={(e) => setFaculty(e.target.value)} className={`${inputClass} w-full sm:w-auto`}>
               {facultyOptions.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
-            <select value={level} onChange={(e) => setLevel(e.target.value)} className={inputClass}>
+            <select value={level} onChange={(e) => setLevel(e.target.value)} className={`${inputClass} w-full sm:w-auto`}>
               {levelOptions.map((o) => <option key={o} value={o}>{o}</option>)}
             </select>
             <span className="text-ucbm-ondark text-[14px]">
@@ -61,14 +61,14 @@ function CoursesContent() {
       </section>
 
       {/* Results grid */}
-      <section className="py-14 px-6 bg-ucbm-light min-h-[400px]">
+      <section className="py-12 md:py-14 px-6 bg-ucbm-light min-h-[400px]">
         <div className="max-w-ucbm mx-auto">
           {filtered.length === 0 ? (
             <p className="text-ucbm-muted text-center py-20 text-[16px]">
               No courses match your filters. Try adjusting your search.
             </p>
           ) : (
-            <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))' }}>
+            <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(340px, 100%), 1fr))' }}>
               {filtered.map((c) => <CourseCard key={c.title} course={c} />)}
             </div>
           )}

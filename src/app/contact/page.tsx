@@ -51,10 +51,8 @@ export default function Contact() {
     <main>
       <PageHeader eyebrow="We Would Love to Hear From You" title="Contact Us" />
 
-      <section className="py-[72px] px-6 bg-white">
-        <div className="max-w-ucbm mx-auto grid items-start gap-14 max-lg:grid-cols-1"
-          style={{ gridTemplateColumns: '1fr 1.3fr' }}
-        >
+      <section className="py-12 md:py-[72px] px-6 bg-white">
+        <div className="max-w-ucbm mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] items-start gap-10 lg:gap-14">
           {/* Left: contact info */}
           <div>
             <h2 className="font-marcellus text-[28px] font-normal text-ucbm-primary m-0 mb-5">Get in Touch</h2>

@@ -217,12 +217,12 @@ export default function Admissions() {
       <PageHeader eyebrow="Fast Track Your Admission" title="Admissions & How to Apply" />
 
       {/* Entry routes */}
-      <section className="py-[72px] px-6 bg-white">
+      <section className="py-12 md:py-[72px] px-6 bg-white">
         <div className="max-w-ucbm mx-auto">
           <h2 className="font-marcellus text-[32px] font-normal text-ucbm-primary m-0 mb-10 text-center max-sm:text-[26px]">
             Whatever Your Starting Point, There Is a Route for You
           </h2>
-          <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+          <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))' }}>
             {admissionRoutes.map((r) => (
               <div key={r.title} className="bg-ucbm-light border-t-4 border-ucbm-gold rounded-xl p-7">
                 <h3 className="font-marcellus text-[21px] font-normal text-ucbm-primary m-0 mb-3">{r.title}</h3>
@@ -234,12 +234,12 @@ export default function Admissions() {
       </section>
 
       {/* How to apply steps */}
-      <section className="py-[72px] px-6 bg-ucbm-light">
+      <section className="py-12 md:py-[72px] px-6 bg-ucbm-light">
         <div className="max-w-ucbm mx-auto">
           <h2 className="font-marcellus text-[32px] font-normal text-ucbm-primary m-0 mb-10 text-center max-sm:text-[26px]">
             How to Apply in Four Steps
           </h2>
-          <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))' }}>
+          <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(230px, 100%), 1fr))' }}>
             {applySteps.map((s) => (
               <div key={s.n} className="bg-white border border-ucbm-border rounded-xl p-7">
                 <div className="font-marcellus text-[34px] text-ucbm-gold mb-3">{s.n}</div>
@@ -252,7 +252,7 @@ export default function Admissions() {
       </section>
 
       {/* Application form */}
-      <section className="py-[72px] px-6 bg-ucbm-dark">
+      <section className="py-12 md:py-[72px] px-6 bg-ucbm-dark">
         <div className="max-w-[760px] mx-auto">
           <div className="text-center mb-9">
             <p className="eyebrow mb-2.5">Ready to Apply?</p>

@@ -29,12 +29,11 @@ export default function Footer() {
   return (
     <footer className="bg-ucbm-footer text-ucbm-ftext pt-16 pb-0">
       <div className="max-w-ucbm mx-auto px-6">
-        <div className="grid gap-10 pb-12 border-b border-white/10 max-lg:grid-cols-2 max-sm:grid-cols-1"
-          style={{ gridTemplateColumns: 'clamp(220px,1.4fr,320px) 1fr 1fr 1.2fr' }}
-        >
+        {/* 4-col → 2-col → 1-col via .footer-grid CSS class */}
+        <div className="footer-grid pb-12 border-b border-white/10">
           {/* Brand block */}
           <div>
-            <div className="flex items-center gap-3 mb-4.5">
+            <div className="flex items-center gap-3 mb-[18px]">
               <div className="w-[42px] h-[42px] bg-ucbm-primary text-ucbm-gold border-2 border-ucbm-gold rounded-lg grid place-items-center font-marcellus text-[14px] flex-shrink-0">
                 UC
               </div>
@@ -58,7 +57,8 @@ export default function Footer() {
                 { label: 'Courses',   href: '/courses' },
                 { label: 'Contact',   href: '/contact' },
               ].map((l) => (
-                <Link key={l.href} href={l.href} className="text-ucbm-ftext no-underline hover:text-white transition-colors duration-200">
+                <Link key={l.href} href={l.href}
+                  className="text-ucbm-ftext no-underline hover:text-white transition-colors duration-200 min-h-[44px] flex items-center">
                   {l.label}
                 </Link>
               ))}
@@ -74,7 +74,8 @@ export default function Footer() {
                 { label: 'Entry Routes',        href: '/admissions' },
                 { label: 'Short Courses & CPD', href: '/courses' },
               ].map((l) => (
-                <Link key={l.label} href={l.href} className="text-ucbm-ftext no-underline hover:text-white transition-colors duration-200">
+                <Link key={l.label} href={l.href}
+                  className="text-ucbm-ftext no-underline hover:text-white transition-colors duration-200 min-h-[44px] flex items-center">
                   {l.label}
                 </Link>
               ))}
@@ -96,7 +97,7 @@ export default function Footer() {
               />
               <button
                 onClick={subscribe}
-                className="bg-ucbm-gold border-none text-ucbm-dark font-extrabold text-[14px] px-[18px] py-[11px] rounded-md cursor-pointer hover:bg-ucbm-gold-hv transition-colors duration-200"
+                className="bg-ucbm-gold border-none text-ucbm-dark font-extrabold text-[14px] px-[18px] py-[11px] rounded-md cursor-pointer hover:bg-ucbm-gold-hv transition-colors duration-200 min-h-[44px]"
               >
                 Subscribe
               </button>

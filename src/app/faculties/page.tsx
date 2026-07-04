@@ -16,18 +16,17 @@ export default function Faculties() {
     <main>
       <PageHeader eyebrow="Five Faculties · Nine Qualification Levels" title="Our Faculties" />
 
-      <section className="py-16 px-6 bg-white">
+      <section className="py-12 md:py-16 px-6 bg-white">
         <div className="max-w-ucbm mx-auto flex flex-col gap-7">
           {faculties.map((f) => (
             <div
               key={f.key}
-              className="grid items-center gap-8 bg-ucbm-light border border-ucbm-border rounded-[14px] p-7 max-md:grid-cols-1"
-              style={{ gridTemplateColumns: '300px 1fr' }}
+              className="grid grid-cols-1 md:grid-cols-[300px_1fr] items-center gap-8 bg-ucbm-light border border-ucbm-border rounded-[14px] p-7"
             >
               <ImageSlot
                 placeholder="Faculty photo"
                 style={{ height: 200, borderRadius: 10 }}
-                className="w-full max-md:h-40"
+                className="w-full"
               />
               <div>
                 <h2 className="font-marcellus text-[26px] font-normal text-ucbm-primary m-0 mb-3 max-sm:text-[22px]">
