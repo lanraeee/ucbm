@@ -21,7 +21,9 @@ export async function GET(req: NextRequest) {
   // Fetch each subscriber record
   const subscribers = await Promise.all(
     blobs.map(async (b) => {
-      const res = await fetch(b.url)
+      const res = await fetch(b.url, {
+        headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
+      })
       return res.json() as Promise<{ name: string; email: string; subscribedAt: string }>
     })
   )
@@ -51,7 +53,7 @@ export async function GET(req: NextRequest) {
       await put(
         `subscribers/done/${slug}`,
         JSON.stringify({ ...subscribers[i], processedAt: new Date().toISOString() }),
-        { access: 'public', addRandomSuffix: false, token: process.env.BLOB_READ_WRITE_TOKEN }
+        { access: 'private', addRandomSuffix: false, token: process.env.BLOB_READ_WRITE_TOKEN }
       )
       await del(b.url, { token: process.env.BLOB_READ_WRITE_TOKEN })
     })

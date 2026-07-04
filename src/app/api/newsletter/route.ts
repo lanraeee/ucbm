@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
       put(
         `subscribers/new/${timestamp}_${slug}.json`,
         JSON.stringify({ name: name.trim(), email, subscribedAt: timestamp }),
-        { access: 'public', addRandomSuffix: false, token: process.env.BLOB_READ_WRITE_TOKEN }
+        { access: 'private', addRandomSuffix: false, token: process.env.BLOB_READ_WRITE_TOKEN }
       ),
       sendMail(
         `Newsletter Subscription: ${name.trim()} <${email}>`,
