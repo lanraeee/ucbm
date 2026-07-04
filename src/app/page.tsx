@@ -43,7 +43,6 @@ export default function Home() {
         <div className="max-w-ucbm mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] items-center gap-10 lg:gap-14">
           <div>
             <div className="inline-block border border-ucbm-gold text-ucbm-gold-lt text-[13px] tracking-[2px] uppercase px-3.5 py-1.5 rounded-full mb-5">
-            · United Kingdom
             </div>
             <h1 className="font-marcellus font-normal m-0 mb-5 leading-[1.12] text-[36px] sm:text-[44px] md:text-[52px]">
               Shape Your Future in Business, Leadership & Management and Health & Social Care
