@@ -26,8 +26,8 @@ export default function Header() {
           <Image
             src="/logo.jpeg"
             alt="Universal College of Business and Management"
-            width={160}
-            height={68}
+            width={155}
+            height={73}
             className="object-contain"
             priority
           />
