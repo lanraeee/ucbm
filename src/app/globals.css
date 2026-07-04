@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-mulish), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #2b2340;
+  }
+}
+
+@layer components {
+  .ucbm-container {
+    @apply max-w-ucbm mx-auto px-6;
+  }
+
+  .eyebrow {
+    @apply text-ucbm-gold font-extrabold uppercase tracking-[2.5px] text-[13px] mb-0;
+  }
+
+  .btn-gold {
+    @apply bg-ucbm-gold text-ucbm-dark font-extrabold rounded-md transition-colors duration-200 hover:bg-ucbm-gold-hv inline-block cursor-pointer;
+  }
+
+  .btn-gold-outline {
+    @apply border-[1.5px] border-ucbm-gold text-ucbm-gold-lt font-bold rounded-md transition-all duration-200 inline-block cursor-pointer;
+  }
+
+  .btn-purple {
+    @apply bg-ucbm-primary text-white font-extrabold rounded-md transition-colors duration-200 hover:bg-ucbm-purple-hv inline-block cursor-pointer;
+  }
+
+  .btn-purple-outline {
+    @apply border-[1.5px] border-ucbm-primary text-ucbm-primary font-extrabold rounded-md transition-all duration-200 hover:bg-ucbm-primary hover:text-white inline-block cursor-pointer;
+  }
+
+  .btn-white-outline {
+    @apply border-[1.5px] border-white/40 text-white font-bold rounded-md transition-all duration-200 hover:border-white inline-block cursor-pointer;
+  }
+
+  .form-input {
+    @apply w-full px-[14px] py-3 border-[1.5px] border-ucbm-input rounded-lg text-[14.5px] font-normal focus:outline-none focus:border-ucbm-primary transition-colors bg-white;
+  }
+
+  .form-label {
+    @apply flex flex-col gap-1.5 text-[13px] font-extrabold text-ucbm-primary;
+  }
+
+  .course-card {
+    @apply bg-white border border-ucbm-border rounded-xl overflow-hidden flex flex-col transition-shadow duration-200 hover:shadow-card;
+  }
+}
