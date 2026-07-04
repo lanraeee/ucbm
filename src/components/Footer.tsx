@@ -5,25 +5,33 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Footer() {
+  const nameRef  = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const [newsMsg, setNewsMsg] = useState('')
+  const [sending, setSending] = useState(false)
 
   async function subscribe() {
-    const v = emailRef.current?.value.trim() ?? ''
-    if (!v || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) {
+    const name  = nameRef.current?.value.trim()  ?? ''
+    const email = emailRef.current?.value.trim() ?? ''
+    if (!name)  { setNewsMsg('Please enter your name.'); return }
+    if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       setNewsMsg('Please enter a valid email address.')
       return
     }
+    setSending(true)
     try {
       await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: v }),
+        body: JSON.stringify({ name, email }),
       })
+      if (nameRef.current)  nameRef.current.value  = ''
       if (emailRef.current) emailRef.current.value = ''
       setNewsMsg("Thank you — you're subscribed!")
     } catch {
       setNewsMsg('Something went wrong. Please try again.')
+    } finally {
+      setSending(false)
     }
   }
 
@@ -90,19 +98,28 @@ export default function Footer() {
             <p className="text-[13.5px] leading-[1.6] mb-3.5">
               Join our newsletter for course news, intake dates and guidance.
             </p>
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2">
               <input
-                ref={emailRef}
-                type="email"
-                placeholder="Your email"
-                className="flex-1 min-w-0 px-3.5 py-[11px] rounded-md border-none text-[14px] text-ucbm-text focus:outline-none"
+                ref={nameRef}
+                type="text"
+                placeholder="Your name"
+                className="w-full px-3.5 py-[11px] rounded-md border-none text-[14px] text-ucbm-text focus:outline-none"
               />
-              <button
-                onClick={subscribe}
-                className="bg-ucbm-gold border-none text-ucbm-dark font-extrabold text-[14px] px-[18px] py-[11px] rounded-md cursor-pointer hover:bg-ucbm-gold-hv transition-colors duration-200 min-h-[44px]"
-              >
-                Subscribe
-              </button>
+              <div className="flex gap-2">
+                <input
+                  ref={emailRef}
+                  type="email"
+                  placeholder="Your email"
+                  className="flex-1 min-w-0 px-3.5 py-[11px] rounded-md border-none text-[14px] text-ucbm-text focus:outline-none"
+                />
+                <button
+                  onClick={subscribe}
+                  disabled={sending}
+                  className="bg-ucbm-gold border-none text-ucbm-dark font-extrabold text-[14px] px-[18px] py-[11px] rounded-md cursor-pointer hover:bg-ucbm-gold-hv transition-colors duration-200 min-h-[44px] disabled:opacity-60"
+                >
+                  {sending ? '…' : 'Subscribe'}
+                </button>
+              </div>
             </div>
             {newsMsg && <p className="mt-2.5 text-[13px] text-ucbm-gold-lt">{newsMsg}</p>}
           </div>

@@ -4,23 +4,24 @@ import { sendMail } from '@/lib/email'
 
 export async function POST(req: NextRequest) {
   try {
-    const { email } = await req.json()
+    const { name, email } = await req.json()
+    if (!name?.trim()) return NextResponse.json({ error: 'Name required' }, { status: 400 })
     if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
     }
 
     const timestamp = new Date().toISOString()
+    const slug = email.replace(/[^a-z0-9]/gi, '_')
 
     await Promise.all([
-      // Store subscriber as a blob entry — list blobs to export the full list
       put(
-        `subscribers/${timestamp}_${email}.json`,
-        JSON.stringify({ email, subscribedAt: timestamp }),
+        `subscribers/new/${timestamp}_${slug}.json`,
+        JSON.stringify({ name: name.trim(), email, subscribedAt: timestamp }),
         { access: 'public', addRandomSuffix: false, token: process.env.BLOB_READ_WRITE_TOKEN }
       ),
       sendMail(
-        `Newsletter Subscription: ${email}`,
-        `<p>New newsletter subscriber: <strong>${email}</strong></p><p>Subscribed at: ${timestamp}</p>`
+        `Newsletter Subscription: ${name.trim()} <${email}>`,
+        `<p><strong>${name.trim()}</strong> subscribed to the newsletter.</p><p>Email: ${email}</p><p>At: ${timestamp}</p>`
       ),
     ])
 
