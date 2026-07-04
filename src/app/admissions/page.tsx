@@ -70,7 +70,7 @@ function AdmissionsForm() {
       })
       setSubmitted(true)
     } catch {
-      setError('Submission failed. Please try again or email info@ucbm.co.uk.')
+      setError('Submission failed. Please try again or email admissions@ucbm.co.uk.')
     } finally {
       setSubmitting(false)
     }

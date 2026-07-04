@@ -44,7 +44,7 @@ export default function Footer() {
             <p className="text-[13.5px] leading-[1.7] mb-5">
               Academic, professional and short courses — Full-Time, Part-Time, ODL and Online — from Certificate to Professional Doctorate.
             </p>
-            <div className="text-[13.5px]">✉ info@ucbm.co.uk · Manchester, UK</div>
+            <div className="text-[13.5px]">✉ admissions@ucbm.co.uk · Manchester, UK</div>
           </div>
 
           {/* The College */}

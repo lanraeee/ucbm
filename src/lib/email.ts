@@ -19,8 +19,8 @@ export async function sendMail(subject: string, html: string) {
   }
   const transporter = getTransporter()
   await transporter.sendMail({
-    from:    process.env.SMTP_FROM ?? 'UCBM Website <noreply@ucbm.co.uk>',
-    to:      process.env.SMTP_TO   ?? 'info@ucbm.co.uk',
+    from:    process.env.SMTP_FROM ?? 'UCBM Website <admissions@ucbm.co.uk>',
+    to:      process.env.SMTP_TO   ?? 'admissions@ucbm.co.uk',
     subject,
     html,
   })

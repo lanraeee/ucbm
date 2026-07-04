@@ -16,7 +16,7 @@ function getReply(q: string): string {
     return "You can apply on our Admissions page — the application takes about 5 minutes. There's a route for everyone, whether you have qualifications, work experience, or neither."
   }
   if (s.includes('fee') || s.includes('cost') || s.includes('price') || s.includes('finance') || s.includes('fund')) {
-    return 'Fee details vary by programme and study mode. Email info@ucbm.co.uk or send an enquiry via the Contact page and our admissions team will send you a full fee schedule.'
+    return 'Fee details vary by programme and study mode. Email admissions@ucbm.co.uk or send an enquiry via the Contact page and our admissions team will send you a full fee schedule.'
   }
   if (s.includes('online') || s.includes('odl') || s.includes('distance') || s.includes('part')) {
     return 'We offer four study modes: Full-Time, Part-Time, ODL (Open & Distance Learning) and fully Online — so you can study around work and family commitments.'
@@ -25,9 +25,9 @@ function getReply(q: string): string {
     return 'Our campus is in Manchester, United Kingdom, with more locations coming soon. Many programmes can also be studied entirely online.'
   }
   if (s.includes('contact') || s.includes('email') || s.includes('phone') || s.includes('speak')) {
-    return 'You can reach us at info@ucbm.co.uk, or use the Contact page to book a consultation or request a prospectus.'
+    return 'You can reach us at admissions@ucbm.co.uk, or use the Contact page to book a consultation or request a prospectus.'
   }
-  return "Thanks for your question! For anything I can't answer here, email info@ucbm.co.uk or send an enquiry via the Contact page — our team replies within two working days."
+  return "Thanks for your question! For anything I can't answer here, email admissions@ucbm.co.uk or send an enquiry via the Contact page — our team replies within two working days."
 }
 
 export default function Chatbot() {
