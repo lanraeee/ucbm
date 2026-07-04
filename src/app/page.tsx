@@ -24,7 +24,7 @@ const collegeSchema = {
   alternateName: 'UCBM',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk',
   address: { '@type': 'PostalAddress', addressLocality: 'Manchester', addressCountry: 'GB' },
-  email: 'info@ucbm.co.uk',
+  email: 'admissions@ucbm.co.uk',
   description: 'Full-Time, Part-Time, ODL and Online programmes from Certificate to Professional Doctorate.',
 }
 
