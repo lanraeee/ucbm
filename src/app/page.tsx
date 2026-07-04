@@ -7,12 +7,12 @@ import { faculties } from '@/data/faculties'
 import { stats, studyModes, valuesData, testimonials } from '@/data/content'
 
 export const metadata: Metadata = {
-  title: 'Universal College of Business and Management | Manchester, UK',
+  title: 'Universal College of Business and Management | United Kingdom',
   description:
     'Full-Time, Part-Time, ODL and Online programmes from Certificate to Professional Doctorate — in Business, Leadership, Health Care, Hospitality and Entrepreneurship.',
   openGraph: {
     title: 'Universal College of Business and Management',
-    description: 'Shape Your Future in Business, Leadership and Care. Study in Manchester, UK.',
+    description: 'Shape Your Future in Business, Leadership & Management and Health & Social Care. Study in UK.',
     url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk',
   },
 }
@@ -23,7 +23,7 @@ const collegeSchema = {
   name: 'Universal College of Business and Management',
   alternateName: 'UCBM',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk',
-  address: { '@type': 'PostalAddress', addressLocality: 'Manchester', addressCountry: 'GB' },
+  address: { '@type': 'PostalAddress', addressLocality: 'UnitedKingdom', addressCountry: 'GB' },
   email: 'admissions@ucbm.co.uk',
   description: 'Full-Time, Part-Time, ODL and Online programmes from Certificate to Professional Doctorate.',
 }
@@ -42,10 +42,10 @@ export default function Home() {
         <div className="max-w-ucbm mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] items-center gap-10 lg:gap-14">
           <div>
             <div className="inline-block border border-ucbm-gold text-ucbm-gold-lt text-[13px] tracking-[2px] uppercase px-3.5 py-1.5 rounded-full mb-5">
-              Manchester · United Kingdom
+            · United Kingdom
             </div>
             <h1 className="font-marcellus font-normal m-0 mb-5 leading-[1.12] text-[36px] sm:text-[44px] md:text-[52px]">
-              Shape Your Future in Business, Leadership and Care
+              Shape Your Future in Business, Leadership & Management and Health & Social Care
             </h1>
             <p className="text-[16px] md:text-[18px] leading-[1.65] text-ucbm-ondark m-0 mb-8 max-w-[560px]">
               From Certificate to Professional Doctorate — study Full-Time, Part-Time, by Open &amp; Distance Learning
