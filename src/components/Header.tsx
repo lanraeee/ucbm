@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
@@ -21,16 +22,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-ucbm-border shadow-header">
       <div className="max-w-ucbm mx-auto px-6 py-3.5 flex items-center gap-6 flex-wrap">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 no-underline" onClick={() => setMobileOpen(false)}>
-          <div className="w-[46px] h-[46px] bg-ucbm-primary text-ucbm-gold border-2 border-ucbm-gold rounded-lg grid place-items-center font-marcellus text-[15px] tracking-[0.5px] flex-shrink-0">
-            UC
-          </div>
-          <div>
-            <div className="font-marcellus text-[17px] text-ucbm-primary leading-[1.15]">Universal College of</div>
-            <div className="font-marcellus text-[17px] text-ucbm-primary leading-[1.15]">
-              Business <span className="text-ucbm-gold">&amp;</span> Management
-            </div>
-          </div>
+        <Link href="/" className="flex items-center no-underline" onClick={() => setMobileOpen(false)}>
+          <Image
+            src="/logo.jpeg"
+            alt="Universal College of Business and Management"
+            width={160}
+            height={68}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}

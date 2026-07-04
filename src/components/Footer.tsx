@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   const emailRef = useRef<HTMLInputElement>(null)
@@ -33,12 +34,15 @@ export default function Footer() {
         <div className="footer-grid pb-12 border-b border-white/10">
           {/* Brand block */}
           <div>
-            <div className="flex items-center gap-3 mb-[18px]">
-              <div className="w-[42px] h-[42px] bg-ucbm-primary text-ucbm-gold border-2 border-ucbm-gold rounded-lg grid place-items-center font-marcellus text-[14px] flex-shrink-0">
-                UC
-              </div>
-              <div className="font-marcellus text-[16px] text-white leading-[1.25]">
-                Universal College of<br />Business &amp; Management
+            <div className="mb-[18px]">
+              <div className="inline-block bg-white rounded-lg p-2">
+                <Image
+                  src="/logo.jpeg"
+                  alt="Universal College of Business and Management"
+                  width={160}
+                  height={68}
+                  className="object-contain"
+                />
               </div>
             </div>
             <p className="text-[13.5px] leading-[1.7] mb-5">
