@@ -21,11 +21,11 @@ const mulish = Mulish({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Universal College of Business and Management | Manchester, UK',
+    default: 'Universal College of Business and Management | United Kingdom',
     template: '%s | UCBM',
   },
   description:
-    'Universal College of Business and Management — Full-Time, Part-Time, ODL and Online academic, professional and short courses in Manchester, UK.',
+    'Universal College of Business and Management — Full-Time, Part-Time, ODL and Online academic, professional and short courses in United Kingdom.',
   openGraph: {
     type: 'website',
     siteName: 'Universal College of Business and Management',
