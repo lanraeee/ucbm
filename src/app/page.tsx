@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import ImageSlot from '@/components/ImageSlot'
 import CourseFinderSection from '@/components/CourseFinderSection'
 import JsonLd from '@/components/JsonLd'
@@ -62,12 +63,17 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          {/* Image — shows below text on mobile, right column on desktop */}
-          <ImageSlot
-            placeholder="Campus / students photo"
-            className="w-full"
-            style={{ height: 280, borderRadius: 16 }}
-          />
+          {/* Hero image */}
+          <div className="w-full rounded-2xl overflow-hidden" style={{ minHeight: 280 }}>
+            <Image
+              src="/campus-students.png"
+              alt="Diverse UCBM students studying together in Manchester city centre"
+              width={1376}
+              height={768}
+              className="w-full h-full object-cover"
+              priority
+            />
+          </div>
         </div>
       </section>
 
