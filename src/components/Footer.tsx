@@ -37,7 +37,7 @@ export default function Footer() {
             <div className="mb-[18px]">
               <div className="inline-block bg-white rounded-lg p-2">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="Universal College of Business and Management"
                   width={155}
                   height={73}

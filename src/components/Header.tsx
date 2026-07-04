@@ -24,7 +24,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center no-underline" onClick={() => setMobileOpen(false)}>
           <Image
-            src="/logo.jpeg"
+            src="/logo.png"
             alt="Universal College of Business and Management"
             width={155}
             height={73}
