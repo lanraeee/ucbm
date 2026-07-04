@@ -4,7 +4,7 @@ import PageHeader from '@/components/PageHeader'
 import { valuesData, goalsData } from '@/data/content'
 
 export const metadata: Metadata = {
-  title: 'About The College',
+  title: 'About UCBM',
   description:
     'Learn about Universal College of Business and Management — our mission, core values, strategic goals and commitment to academic and professional quality.',
   openGraph: { title: 'About UCBM', url: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk'}/about` },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <main>
-      <PageHeader eyebrow="About UCBM" title="About The College" />
+      <PageHeader eyebrow="About UCBM" title="About UCBM" />
 
       {/* Intro — 1-col → 1.2fr/1fr at lg */}
       <section className="py-12 md:py-[72px] px-6 bg-white">
@@ -39,7 +39,7 @@ export default function About() {
             </p>
           </div>
           <div className="w-full rounded-2xl overflow-hidden" style={{ minHeight: 300 }}>
-            <Image src="/college-building.png" alt="UCBM college building exterior in Manchester" width={1200} height={896} className="w-full h-full object-cover" />
+            <Image src="/college-building.png" alt="UCBM building exterior" width={1200} height={896} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function About() {
       <section className="py-12 md:py-[72px] px-6 bg-ucbm-light">
         <div className="max-w-ucbm mx-auto">
           <h2 className="font-marcellus text-[26px] md:text-[34px] font-normal text-ucbm-primary m-0 mb-3 text-center">
-            The College Core Values
+            UCBM Core Values
           </h2>
           <p className="text-center text-[14px] md:text-[15.5px] text-ucbm-muted max-w-[720px] mx-auto mb-10 leading-[1.7]">
             Our core values underpin everything we do, from the way we teach and lead to the way we engage with our
