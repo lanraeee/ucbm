@@ -38,7 +38,7 @@ export default function Contact() {
       })
       setSent(true)
     } catch {
-      setError('Could not send. Please email info@ucbm.co.uk directly.')
+      setError('Could not send. Please email admissions@ucbm.co.uk directly.')
     } finally {
       setSending(false)
     }
@@ -60,7 +60,7 @@ export default function Contact() {
             <h2 className="font-marcellus text-[28px] font-normal text-ucbm-primary m-0 mb-5">Get in Touch</h2>
             <div className="flex flex-col gap-4.5">
               {[
-                { icon: '✉', label: 'Email',  value: 'info@ucbm.co.uk', note: '' },
+                { icon: '✉', label: 'Email',  value: 'admissions@ucbm.co.uk', note: '' },
                 { icon: '◎', label: 'Campus', value: 'Manchester, United Kingdom', note: 'Full address to be announced — more locations coming soon.' },
                 { icon: '✆', label: 'Phone',  value: '', note: 'To be announced' },
               ].map((item) => (
