@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import PageHeader from '@/components/PageHeader'
-import ImageSlot from '@/components/ImageSlot'
 import { valuesData, goalsData } from '@/data/content'
 
 export const metadata: Metadata = {
@@ -38,7 +38,9 @@ export default function About() {
               businesses, organisations, and the wider global community.
             </p>
           </div>
-          <ImageSlot placeholder="College photo" style={{ height: 300, borderRadius: 16 }} className="w-full" />
+          <div className="w-full rounded-2xl overflow-hidden" style={{ minHeight: 300 }}>
+            <Image src="/college-building.png" alt="UCBM college building exterior in Manchester" width={1200} height={896} className="w-full h-full object-cover" />
+          </div>
         </div>
       </section>
 
@@ -126,7 +128,9 @@ export default function About() {
               — from the individual attention given to each student, to the development of new disciplines.
             </p>
           </div>
-          <ImageSlot placeholder="Graduation / partnership photo" style={{ height: 300, borderRadius: 16 }} className="w-full" />
+          <div className="w-full rounded-2xl overflow-hidden" style={{ minHeight: 300 }}>
+            <Image src="/graduation.png" alt="UCBM graduation ceremony" width={1200} height={896} className="w-full h-full object-cover" />
+          </div>
         </div>
       </section>
     </main>

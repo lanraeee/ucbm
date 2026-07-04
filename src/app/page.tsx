@@ -182,10 +182,15 @@ export default function Home() {
       <section className="py-12 md:py-20 px-6 bg-ucbm-light">
         {/* 1-col → 1fr/1fr at lg */}
         <div className="max-w-ucbm mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-14">
-          <ImageSlot placeholder="Teaching / campus photo"
-            style={{ height: 280, borderRadius: 16 }}
-            className="w-full md:h-[360px]"
-          />
+          <div className="w-full rounded-2xl overflow-hidden" style={{ minHeight: 280 }}>
+            <Image
+              src="/teaching-campus.png"
+              alt="Lecturer teaching diverse students in a UCBM lecture hall"
+              width={1200}
+              height={896}
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div>
             <p className="eyebrow">Our Mission</p>
             <h2 className="font-marcellus text-[28px] md:text-[36px] font-normal text-ucbm-primary m-0 mb-4 leading-[1.25]">

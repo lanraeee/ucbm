@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import PageHeader from '@/components/PageHeader'
-import ImageSlot from '@/components/ImageSlot'
 
 type ContactState = {
   name: string; email: string; reason: string; message: string
@@ -74,11 +74,9 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-            <ImageSlot
-              placeholder="Map / campus photo"
-              style={{ height: 220, borderRadius: 12, marginTop: 28 }}
-              className="w-full"
-            />
+            <div className="w-full rounded-xl overflow-hidden mt-7" style={{ height: 220 }}>
+              <Image src="/manchester-city.png" alt="Manchester city centre" width={1376} height={768} className="w-full h-full object-cover" />
+            </div>
           </div>
 
           {/* Right: enquiry form */}
