@@ -10,10 +10,10 @@ import { stats, studyModes, valuesData, testimonials } from '@/data/content'
 export const metadata: Metadata = {
   title: 'Universal College of Business and Management | United Kingdom',
   description:
-    'Full-Time, Part-Time, ODL and Online programmes from Certificate to Professional Doctorate — in Business, Leadership, Health Care, Hospitality and Entrepreneurship.',
+    'Full-Time, Part-Time, ODL and Online programmes from Certificate to Professional Doctorate — in Business, Management, Leadership, Computing and Health & Social Care, Hospitality and Entrepreneurship.',
   openGraph: {
     title: 'Universal College of Business and Management',
-    description: 'Shape Your Future in Business, Leadership & Management and Health & Social Care. Study in UK.',
+    description: 'Shape Your Future in Business, Management, Leadership, Computing and Health & Social Care. Study in UK.',
     url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk',
   },
 }
@@ -45,7 +45,7 @@ export default function Home() {
             <div className="inline-block border border-ucbm-gold text-ucbm-gold-lt text-[13px] tracking-[2px] uppercase px-3.5 py-1.5 rounded-full mb-5">
             </div>
             <h1 className="font-marcellus font-normal m-0 mb-5 leading-[1.12] text-[36px] sm:text-[44px] md:text-[52px]">
-              Shape Your Future in Business, Leadership & Management and Health & Social Care
+              Shape Your Future in Business, Management, Leadership, Computing and Health & Social Care
             </h1>
             <p className="text-[16px] md:text-[18px] leading-[1.65] text-ucbm-ondark m-0 mb-8 max-w-[560px]">
               From Certificate to Professional Doctorate — study Full-Time, Part-Time, by Open &amp; Distance Learning
