@@ -12,9 +12,13 @@ export const metadata: Metadata = {
   description:
     'Full-Time, Part-Time, ODL and Online programmes from Certificate to Professional Doctorate — in Business, Management, Leadership, Computing and Health & Social Care, Hospitality and Entrepreneurship.',
   openGraph: {
-    title: 'Universal College of Business and Management',
-    description: 'Shape Your Future in Business, Management, Leadership, Computing and Health & Social Care. Study in UK.',
+    title: 'Universal College of Business and Management | United Kingdom',
+    description:
+      'Shape Your Future in Business, Management, Leadership, Computing and Health & Social Care. Full-Time, Part-Time, ODL and Online programmes — study in the UK.',
     url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk',
+  },
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk',
   },
 }
 

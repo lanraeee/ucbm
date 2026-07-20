@@ -7,7 +7,13 @@ export const metadata: Metadata = {
   title: 'About UCBM',
   description:
     'Learn about Universal College of Business and Management — our mission, core values, strategic goals and commitment to academic and professional quality.',
-  openGraph: { title: 'About UCBM', url: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk'}/about` },
+  openGraph: {
+    title: 'About UCBM | Universal College of Business and Management',
+    description:
+      'Learn about Universal College of Business and Management — our mission, core values, strategic goals and commitment to academic and professional quality.',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk'}/about`,
+  },
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk'}/about` },
 }
 
 export default function About() {

@@ -8,7 +8,13 @@ export const metadata: Metadata = {
   title: 'Our Faculties',
   description:
     'Five faculties, nine qualification levels. Discover the Faculty of Business, Leadership, Health & Social Care, Hospitality and Entrepreneurship at UCBM.',
-  openGraph: { title: 'UCBM Faculties', url: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk'}/faculties` },
+  openGraph: {
+    title: 'Our Faculties | UCBM',
+    description:
+      'Five faculties, nine qualification levels. Discover Business, Leadership, Health & Social Care, Hospitality and Entrepreneurship at UCBM.',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk'}/faculties`,
+  },
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ucbm.co.uk'}/faculties` },
 }
 
 const facultyImages: Record<string, { src: string; alt: string }> = {
